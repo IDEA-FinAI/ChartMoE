@@ -39,8 +39,9 @@ class ChartMoE_Robot:
     
     def chat(
             self, 
-            image_path, 
-            question, 
+            image_path=None,
+            image=None, 
+            question="", 
             history="",
             temperature=1, 
             max_new_tokens=1000, 
@@ -52,13 +53,22 @@ class ChartMoE_Robot:
         pt1 = 0
         embeds = []
         im_mask = []
-        images = [image_path]
-        images_loc = [0]
         question = self.prompt.format(question)
         history += question
 
-        for i, pts in enumerate(images_loc + [len(question)]):
-            subtext = question[pt1:pts]
+        if image_path and image:
+            assert False, "Just give the `image_path` or give the `PIL.Image` to `image`!"
+        if image_path is None and image is None:
+            assert False, "`image_path` and `image` are both None! Please give the `image_path` or give the `PIL.Image` to `image`!"
+        
+        if image_path:
+            images = [image_path]
+        else:
+            images = [image]
+        images_loc = [0]
+
+        for i, pts in enumerate(images_loc + [len(history)]):
+            subtext = history[pt1:pts]
             if need_bos or len(subtext) > 0:
                 text_embeds = self.model.encode_text(subtext, add_special_tokens=need_bos)
                 embeds.append(text_embeds)
@@ -80,6 +90,10 @@ class ChartMoE_Robot:
         im_mask = torch.cat(im_mask, dim=1)
         im_mask = im_mask.bool()
 
+        eos_token_id = [
+            self.tokenizer.convert_tokens_to_ids(['[UNUSED_TOKEN_145]'])[0],
+            self.tokenizer.eos_token_id,
+        ]
         outputs = self.model.generate(
                     inputs_embeds=embeds,
                     im_mask=im_mask,
@@ -87,7 +101,8 @@ class ChartMoE_Robot:
                     max_new_tokens=max_new_tokens,
                     num_beams=num_beams,
                     do_sample=do_sample, 
-                    repetition_penalty=repetition_penalty
+                    repetition_penalty=repetition_penalty,
+                    eos_token_id=eos_token_id,
                 )
 
         output_token = outputs[0]
