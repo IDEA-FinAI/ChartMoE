@@ -1,4 +1,5 @@
 from chartmoe import ChartMoE_Robot
+from chartmoe import ChartQA_ROOT, ChartQA_TEST_IMG_ROOT
 
 import os, sys, json, re, io
 import argparse
@@ -71,7 +72,8 @@ class ChartQATester:
 
     def __init__(self, pot=False):
         # ChartQA root
-        self.root = '/data/FinAi_Mapping_Knowledge/qiyiyan/qbw/cache/data/chart/ChartQA/'
+        self.root = ChartQA_ROOT
+        self.vis_root = ChartQA_TEST_IMG_ROOT
 
         self.robot = ChartMoE_Robot()
         self.prompt = '[UNUSED_TOKEN_146]user\nAnswer the question using a single word or phrase.{}[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n'
@@ -101,7 +103,7 @@ class ChartQATester:
                 part = []
                 samples = json.load(open(self.root+f'test/test_{part_name}.json')) 
                 for q in tqdm(samples):
-                    im_path = os.path.join(self.root, 'test/png/', q['imgname'])
+                    im_path = os.path.join(self.vis_root, q['imgname'])
                     question = q['query']
 
                     with torch.cuda.amp.autocast():

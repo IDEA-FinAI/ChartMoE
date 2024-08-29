@@ -5,6 +5,8 @@ from transformers import AutoModel, AutoTokenizer
 from PIL import Image
 import torchvision
 
+from chartmoe import ChartMoE_HF_PATH
+
 def __padding__(image):
     width, height = image.size
     tar = max(width, height)
@@ -18,11 +20,11 @@ def __padding__(image):
 class ChartMoE_Robot:
     def __init__(self, img_padding = False):
         tokenizer = AutoTokenizer.from_pretrained(
-                '/data/FinAi_Mapping_Knowledge/qiyiyan/qbw/cache/ckpt/chartmoe/chartmoe_hf', 
+                ChartMoE_HF_PATH, 
                 trust_remote_code=True
             )
         self.model = AutoModel.from_pretrained(
-                    '/data/FinAi_Mapping_Knowledge/qiyiyan/qbw/cache/ckpt/chartmoe/chartmoe_hf',
+                    ChartMoE_HF_PATH,
                     trust_remote_code=True
                 ).cuda().half().eval()
         self.tokenizer = tokenizer

@@ -27,6 +27,9 @@ pip install -e .
 ```
 
 ## Quick Start
+**Customize the weight path of ChartMoE:**
+Set your own [ChartMoE_HF_PATH](https://github.com/Coobiw/ChartMoE/tree/master/chartmoe/utils/custom_path.py#L2).
+
 Code Demo:
 
 ```python
@@ -47,6 +50,8 @@ print(response)
 ## Evaluation
 
 ### ChartQA
+**Customize the path of ChartQA:**
+Set your own [ChartQA_ROOT](https://github.com/Coobiw/ChartMoE/tree/master/chartmoe/utils/custom_path.py#L5)(including `test_human.json` and `test_augmented.json`) and [ChartQA_TEST_IMG_ROOT](https://github.com/Coobiw/ChartMoE/tree/master/chartmoe/utils/custom_path.py#L6)(including the test images).
 
 **w/ PoT:**
 ```bash
