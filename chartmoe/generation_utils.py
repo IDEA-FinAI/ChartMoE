@@ -5,7 +5,7 @@ from transformers import AutoModel, AutoTokenizer
 from PIL import Image
 import torchvision
 
-from chartmoe import ChartMoE_HF_PATH
+from chartmoe.utils.custom_path import ChartMoE_HF_PATH
 
 def __padding__(image):
     width, height = image.size

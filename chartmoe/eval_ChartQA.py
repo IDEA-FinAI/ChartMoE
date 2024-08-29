@@ -1,5 +1,5 @@
 from chartmoe import ChartMoE_Robot
-from chartmoe import ChartQA_ROOT, ChartQA_TEST_IMG_ROOT
+from chartmoe.utils.custom_path import ChartQA_ROOT, ChartQA_TEST_IMG_ROOT
 
 import os, sys, json, re, io
 import argparse
