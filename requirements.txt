@@ -1,0 +1,11 @@
+transformers==4.33.2
+timm==0.4.12
+sentencepiece==0.1.99
+gradio==4.13.0
+markdown2==2.4.10
+xlsxwriter==3.1.2
+einops==0.8.0
+deepspeed==0.14.2
+peft==0.10.0
+prettytable==3.10.2
+tqdm
