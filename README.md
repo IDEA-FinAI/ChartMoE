@@ -68,3 +68,5 @@ CUDA_VISIBLE_DEVICES=0 python chartmoe/eval_ChartQA.py --save_path ./results/cha
 ```bash
 CUDA_VISIBLE_DEVICES=0 python gradio_demo.py 
 ```
+
+![](./gradio_demo_pics/gradio_demo1.jpg)
