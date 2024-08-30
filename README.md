@@ -1,5 +1,7 @@
 # ChartMoE: Mixture of Expert Connector for Better Chart Understanding
 
+![Overview](./asset/train_pipeline.png)
+
 ## Installation
 **Step 1.** Create a conda environment and activate it.
 
@@ -70,3 +72,19 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py
 ```
 
 ![](./gradio_demo_pics/gradio_demo1.jpg)
+
+## Citation
+If you find our idea or code inspiring, please cite our paper:
+```bibtex
+TBD
+```
+This code is partially based on [ChartBench](https://chartbench.github.io/), if you use our code, please also cite：
+```bibtex
+@article{ChartBench,
+    title={ChartBench: A Benchmark for Complex Visual Reasoning in Charts},
+    author={Zhengzhuo Xu and Sinan Du and Yiyan Qi and Chengjin Xu and Chun Yuan and Jian Guo},
+    journal={ArXiv},
+    year={2023},
+    volume={abs/2312.15915},
+}
+```
