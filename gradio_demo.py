@@ -92,9 +92,8 @@ def gradio_answer(chatbot, text_input, history, img_list, do_sample,num_beams, t
     text_input = ''
     return chatbot, history, img_list, text_input
 
-title = """<h1 align="center">Demo of ChartMoE</h1>"""
-description = """<h3>This is the demo of ChartMoE. Upload your images and start chatting! <br> To use
-            example questions, click example image, hit upload, and press enter in the chatbox. </h3>"""
+title = """<h2 align="center">Demo of ChartMoE</h2>"""
+description = """<h3>This is the demo of ChartMoE. Upload your image and start chatting! To use example questions, click example image, hit upload, and press enter in the chatbox. </h3>"""
 
 from transformers.trainer_utils import set_seed
 set_seed(42)
@@ -105,58 +104,70 @@ with gr.Blocks() as demo:
     gr.Markdown(description)
 
     with gr.Row():
-        with gr.Column(scale=0.5):
+        with gr.Column(scale=0.25):
             image = gr.Image(type="pil")
-            upload_button = gr.Button(value="Upload & Start Chat", interactive=True, variant="primary")
-            clear = gr.Button("Restart 🔄")
-            do_sample = gr.components.Radio(['True', 'False'],
-                            label='do_sample(If False, num_beams, temperature and so on cannot work!)',
-                            value='False')
+            with gr.Row():
+                upload_button = gr.Button(value="Upload & Start Chat", interactive=True, variant="primary")
+                clear = gr.Button("Restart 🔄")
+            
+            examples_placeholder = gr.Column()
 
-            num_beams = gr.Slider(
-                minimum=1,
-                maximum=5,
-                value=3,
-                step=1,
-                interactive=True,
-                label="beam search numbers",
-            )
-
-            temperature = gr.Slider(
-                minimum=0.1,
-                maximum=2.0,
-                value=1.0,
-                step=0.1,
-                interactive=True,
-                label="Temperature",
-            )
-
-            max_new_tokens = gr.Slider(
-                minimum=128,
-                maximum=4096,
-                value=512,
-                step=128,
-                interactive=True,
-                label="max new tokens",
-            )
-
-        with gr.Column():
+        with gr.Column(scale=0.75):
             history = gr.State(value="")
             img_list = gr.State(value=[])
-            chatbot = gr.Chatbot(label='ChartMoE')
-            text_input = gr.Textbox(label='User', placeholder='Please upload your image first', interactive=False)
+            chatbot = gr.Chatbot(label='ChartMoE', height=700)
 
-            gr.Examples(examples=[
-                ["examples/bar2.png", "Redraw the chart with python matplotlib, giving the code to highlight the column corresponding to the year in which the student got the highest score (painting it red). Please keep the same colors and legend as the input chart."],
-                ["examples/line3.png", "Redraw the chart with python matplotlib, giving the code to highlight data point with lowest growth rate (draw a horizontal dotted line parallel to the x-axi, through the lowest point and add \'lowest\' label in the legend anchor). Please keep the same colors and legend as the input chart."],
-                ["examples/pie1.png", "Redraw the chart with python matplotlib, convert it into a bar chart, giving the code to reflect the fact that the price of \'Gold\' has been reduced to 27% and the \'Silver\' has been increased to 28%. Please keep the colors and legend according to the input chart."]
-            ], inputs=[image, text_input])
+            with gr.Row():
+                text_input = gr.Textbox(label='User', placeholder='Please upload your image first', interactive=False, scale=8)
+                submit_button = gr.Button(value="Submit", variant="primary",scale=2)
+            
+            with gr.Row():
+                do_sample = gr.components.Radio(['True', 'False'],
+                                label='do_sample',
+                                value='False')
+
+                num_beams = gr.Slider(
+                    minimum=1,
+                    maximum=5,
+                    value=3,
+                    step=1,
+                    interactive=True,
+                    label="num beams",
+                )
+
+                temperature = gr.Slider(
+                    minimum=0.1,
+                    maximum=2.0,
+                    value=1.0,
+                    step=0.1,
+                    interactive=True,
+                    label="Temperature",
+                )
+
+                max_new_tokens = gr.Slider(
+                    minimum=128,
+                    maximum=4096,
+                    value=1024,
+                    step=128,
+                    interactive=True,
+                    label="max new tokens",
+                )
+
+    with examples_placeholder:
+        gr.Examples(examples=[
+            ["examples/bar2.png", "Redraw the chart with python matplotlib, giving the code to highlight the column corresponding to the year in which the student got the highest score (painting it red). Please keep the same colors and legend as the input chart."],
+            ["examples/line3.png", "Redraw the chart with python matplotlib, giving the code to highlight data point with lowest growth rate (draw a horizontal dotted line parallel to the x-axi, through the lowest point and add \'lowest\' label in the legend anchor). Please keep the same colors and legend as the input chart."],
+            ["examples/pie1.png", "Redraw the chart with python matplotlib, convert it into a bar chart, giving the code to reflect the fact that the price of \'Gold\' has been reduced to 27% and the \'Silver\' has been increased to 28%. Please keep the colors and legend according to the input chart."]
+        ], inputs=[image, text_input])
 
     upload_button.click(upload_img, [image, text_input, history,img_list], [image, text_input, upload_button, history, img_list])
 
     # print(list(map(type,[text_input, chatbot])))
     # print(list(map(type,[chatbot, history, img_list, do_sample, num_beams, temperature, max_new_tokens])))
     text_input.submit(gradio_ask, [text_input, chatbot], [text_input, chatbot]).then(
+        gradio_answer, [chatbot, text_input, history, img_list, do_sample, num_beams, temperature, max_new_tokens], [chatbot, history, img_list, text_input]
+    )
+    submit_button.click(gradio_ask, [text_input, chatbot], [text_input, chatbot]).then(
         gradio_answer, [chatbot, text_input, history, img_list, do_sample, num_beams, temperature, max_new_tokens], [chatbot, history, img_list, text_input]
     )
     clear.click(gradio_reset, [history, img_list], [chatbot, image, text_input, upload_button, history, img_list], queue=False)
