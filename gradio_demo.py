@@ -115,7 +115,11 @@ with gr.Blocks() as demo:
         with gr.Column(scale=0.75):
             history = gr.State(value="")
             img_list = gr.State(value=[])
-            chatbot = gr.Chatbot(label='ChartMoE', height=700)
+            chatbot = gr.Chatbot(
+                label='ChartMoE',
+                height=700,
+                avatar_images=['gradio_demo_pics/user.png','gradio_demo_pics/robot.png']
+            )
 
             with gr.Row():
                 text_input = gr.Textbox(label='User', placeholder='Please upload your image first', interactive=False, scale=8)
