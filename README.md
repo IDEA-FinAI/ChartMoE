@@ -1,5 +1,17 @@
 # ChartMoE: Mixture of Expert Connector for Better Chart Understanding
+<div align="center">
 
+[![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-red)](#)
+[![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://chartmoe.github.io/)
+[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
+
+</div>
+
+![](./asset/teaser.png)
+
+**ChartMoE** is a multimodal large language model with Mixture-of-Expert connector for advanced chart 1)understanding, 2)replot, 3)editing, 4)highlighting and 5)transformation. 
+
+## Training Pipeline of ChartMoE
 ![Overview](./asset/train_pipeline.png)
 
 ## Installation
