@@ -85,6 +85,9 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py
 
 ![](./gradio_demo_pics/gradio_demo1.jpg)
 
+## Acknowledgement
+Thanks to [InternLM-XComposer2](https://github.com/InternLM/InternLM-XComposer/tree/main/InternLM-XComposer-2.0) and [CuMo](https://github.com/SHI-Labs/CuMo) for their releases of model weights and source codes!
+
 ## Citation
 If you find our idea or code inspiring, please cite our paper:
 ```bibtex
