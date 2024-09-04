@@ -26,7 +26,7 @@ class ChartMoE_Robot:
         self.model = AutoModel.from_pretrained(
                     ChartMoE_HF_PATH,
                     trust_remote_code=True
-                ).cuda().half().eval()
+                ).half().cuda().eval()
         self.tokenizer = tokenizer
         self.model.tokenizer = tokenizer
         
