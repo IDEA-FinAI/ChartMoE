@@ -1,7 +1,7 @@
-# ChartMoE: Mixture of Expert Connector for Better Chart Understanding
+# ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding
 <div align="center">
 
-[![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-red)](#)
+[![arXiv](https://img.shields.io/badge/ArXiv-Prepint-red)](https://arxiv.org/abs/2409.03277)
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://chartmoe.github.io/)
 [![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
 
@@ -91,7 +91,13 @@ Thanks to [InternLM-XComposer2](https://github.com/InternLM/InternLM-XComposer/t
 ## Citation
 If you find our idea or code inspiring, please cite our paper:
 ```bibtex
-TBD
+@article{ChartMoE,
+    title={ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding},
+    author={Zhengzhuo Xu and Bowen Qu and Yiyan Qi and Sinan Du and Chengjin Xu and Chun Yuan and Jian Guo},
+    journal={ArXiv},
+    year={2024},
+    volume={abs/2409.03277},
+}
 ```
 This code is partially based on [ChartBench](https://chartbench.github.io/), if you use our code, please also cite：
 ```bibtex
