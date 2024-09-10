@@ -80,13 +80,6 @@ CUDA_VISIBLE_DEVICES=0 python chartmoe/eval_ChartQA.py --save_path ./results/cha
 ### MME
 Run `chartmoe/eval_MME.ipynb` for MME scores.
 
-### MathVista
-Run `chartmoe/eval_MathVista.ipynb` for the output file. Modify the path of output file and set the path of score file.
-
-```bash
-python utils/calculate_mathvista_score.py 
-```
-
 ## WebUI Demo
 
 ```bash
