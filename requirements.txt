@@ -9,3 +9,4 @@ deepspeed==0.14.2
 peft==0.10.0
 prettytable==3.10.2
 tqdm
+datasets==2.21.0

@@ -77,6 +77,9 @@ CUDA_VISIBLE_DEVICES=0 python chartmoe/eval_ChartQA.py --save_path ./results/cha
 CUDA_VISIBLE_DEVICES=0 python chartmoe/eval_ChartQA.py --save_path ./results/chartqa_results
 ```
 
+### MME
+Run `chartmoe/eval_MME.ipynb` for MME scores.
+
 ## WebUI Demo
 
 ```bash
