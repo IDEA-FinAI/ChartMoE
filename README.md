@@ -11,7 +11,12 @@
 
 **ChartMoE** is a multimodal large language model with Mixture-of-Expert connector for advanced chart 1)understanding, 2)replot, 3)editing, 4)highlighting and 5)transformation. 
 
+## News
+
+- 2024.9.10: We release ChartMoE!
+
 ## Training Pipeline of ChartMoE
+
 ![Overview](./asset/train_pipeline.png)
 
 ## Installation
@@ -89,7 +94,7 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py
 ![](./gradio_demo_pics/gradio_demo1.jpg)
 
 ## Acknowledgement
-Thanks to [InternLM-XComposer2](https://github.com/InternLM/InternLM-XComposer/tree/main/InternLM-XComposer-2.0) and [CuMo](https://github.com/SHI-Labs/CuMo) for their releases of model weights and source codes!
+Thanks to [InternLM-XComposer2](https://github.com/InternLM/InternLM-XComposer/tree/main/InternLM-XComposer-2.0) and [CuMo](https://github.com/SHI-Labs/CuMo) for their releases of model weights and source codes! And thanks to [MMC](https://github.com/FuxiaoLiu/MMC) and [ChartGemma](https://github.com/vis-nlp/ChartGemma) for their releases of the high-quality instruction-tuning data!
 
 ## Citation
 If you find our idea or code inspiring, please cite our paper:
