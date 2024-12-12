@@ -61,7 +61,7 @@ question = "Redraw the chart with python matplotlib, giving the code to highligh
 
 history = ""
 with torch.cuda.amp.autocast():
-    response, history = robot.chat(image_path, question, history=history)
+    response, history = robot.chat(image_path=image_path, question=question, history=history)
 
 print(response)
 ```
