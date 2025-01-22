@@ -1,4 +1,4 @@
-# ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding
+# (ICLR2025) ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding
 <div align="center">
 
 [![arXiv](https://img.shields.io/badge/ArXiv-Prepint-red)](https://arxiv.org/abs/2409.03277)
@@ -13,6 +13,7 @@
 
 ## News
 
+- 2025.1.23: 🎉🎉🎉 ChartMoE has been accepted by ICLR2025!
 - 2024.9.10: We release ChartMoE!
 
 ## Training Pipeline of ChartMoE
