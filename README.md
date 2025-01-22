@@ -13,7 +13,7 @@
 
 ## News
 
-- 2025.1.23: 🎉🎉🎉 ChartMoE has been accepted by ICLR2025!
+- 2025.1.23: 🎉🎉🎉 ChartMoE is accepted by ICLR2025!
 - 2024.9.10: We release ChartMoE!
 
 ## Training Pipeline of ChartMoE
