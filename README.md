@@ -1,9 +1,19 @@
 <div align="center">
-<h1>ChartMoE: Mixture of Diversely Aligned Expert Connector for Chart Understanding
-</h1>
-</div>
+<img src="./asset/chartmoe-logo.jpg" width="25%">
+<h1>ChartMoE</h1>
+<h3>Mixture of Diversely Aligned Expert Connector for Chart Understanding</h3>
 
-<div align="center">
+[Zhengzhuo Xu](https://github.com/XuZhengzhuo)<sup>1,2\*</sup>, [Bowen Qu](https://github.com/Coobiw)<sup>1,3\*</sup>, Yiyan Qi<sup>1\*</sup>,  Sinan Du<sup>2</sup>, Chengjin Xu<sup>1</sup>, Chun Yuan<sup>2</sup>, Jian Guo<sup>1,4</sup>
+
+<sup>1</sup> International Digital Economy Academy (IDEA),
+<sup>2</sup> Tsinghua University,
+<sup>3</sup> Peking University,
+
+<sup>4</sup> Hong Kong University of Science and Technology, Guangzhou
+
+<b>ICLR 2025</b>
+
+(\* equal contribution)
 
 [![arXiv](https://img.shields.io/badge/ArXiv-Prepint-red)](https://arxiv.org/abs/2409.03277)
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://chartmoe.github.io/)
