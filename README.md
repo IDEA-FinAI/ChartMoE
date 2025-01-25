@@ -19,6 +19,8 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://chartmoe.github.io/)
 [![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
 
+*If you have any question, feel free to contact [📧](brian.bw.qu@gmail.com).*
+
 </div>
 
 ![](./asset/teaser.png)
