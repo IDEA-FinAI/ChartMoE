@@ -45,7 +45,7 @@ class ChartMoE_Robot:
             history="",
             temperature=1, 
             max_new_tokens=1000, 
-            num_beams=3,
+            num_beams=1,
             do_sample=False, 
             repetition_penalty=1.0,
         ):
