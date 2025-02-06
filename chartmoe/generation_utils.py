@@ -1,3 +1,8 @@
+"""
+    FEATURE: Generation Scipt of ChartMoE
+    AUTHOR: Brian Qu
+    URL: https://arxiv.org/abs/2409.03277
+"""
 import os
 
 import torch

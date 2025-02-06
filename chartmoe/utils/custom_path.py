@@ -1,3 +1,8 @@
+"""
+    FEATURE: Configuration of customized paths
+    AUTHOR: Brian Qu
+    URL: https://arxiv.org/abs/2409.03277
+"""
 # Model
 ChartMoE_HF_PATH = 'IDEA-FinAI/chartmoe'
 

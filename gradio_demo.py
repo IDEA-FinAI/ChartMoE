@@ -1,3 +1,9 @@
+"""
+    FEATURE: WebUI of ChartMoE
+    AUTHOR: Brian Qu
+    URL: https://arxiv.org/abs/2409.03277
+    REFERENCE: https://github.com/Coobiw/MPP-LLaVA
+"""
 import argparse
 import os
 import random
