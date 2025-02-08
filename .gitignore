@@ -160,3 +160,6 @@ cache/
 
 # wandb
 wandb/
+
+# debug dirs
+chartmoe/train/debug/
