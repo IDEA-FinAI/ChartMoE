@@ -11,7 +11,7 @@
 
 <sup>4</sup> Hong Kong University of Science and Technology, Guangzhou
 
-<b>ICLR 2025</b>
+<b>ICLR 2025 Oral</b>
 
 (\* equal contribution)
 
@@ -29,6 +29,7 @@
 
 ## News
 
+- 2025.2.11: 🎉🎉🎉 ChartMoE is selected as ICLR2025 Oral!
 - 2025.1.23: 🎉🎉🎉 ChartMoE is accepted by ICLR2025!
 - 2024.9.10: We release ChartMoE!
 
