@@ -1,3 +1,8 @@
+"""
+    FEATURE: ChartQA Evaluation of ChartMoE, with/without PoT(Program of Thoughts)
+    AUTHOR: Brian Qu
+    URL: https://arxiv.org/abs/2409.03277
+"""
 from chartmoe import ChartMoE_Robot
 from chartmoe.utils.custom_path import ChartQA_ROOT, ChartQA_TEST_IMG_ROOT
 
