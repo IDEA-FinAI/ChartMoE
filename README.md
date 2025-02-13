@@ -62,6 +62,16 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
+**Step 5.** (Optional) Install Flash-Attn (cuda > 11.7)
+
+```bash
+pip install flash-attn==2.7.0.post2
+```
+
+*Flash-Attn can bring ~30% accleration on training and ~20% on evaluation in our experiments.*
+
+p.s.: If you cannot install `flash-attn`, please set `attn_implementation` to `eager` in ChartMoE's [`config.json`](https://huggingface.co/IDEA-FinAI/chartmoe/blob/main/config.json#L10).
+
 ## Quick Start
 **Customize the weight path of ChartMoE:**
 Set your own [ChartMoE_HF_PATH](https://github.com/Coobiw/ChartMoE/tree/master/chartmoe/utils/custom_path.py#L2).
