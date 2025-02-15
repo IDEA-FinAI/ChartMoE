@@ -29,6 +29,7 @@ class ChartMoE_Robot:
                 model_path, 
                 trust_remote_code=True
             )
+        print(f"\033[34mLoad model from {model_path}\033[0m")
         self.model = AutoModel.from_pretrained(
                     model_path,
                     trust_remote_code=True,

@@ -168,3 +168,5 @@ chartmoe/train/output/
 chartmoe/train/logs/
 chartmoe/train/ckpt/*
 chartmoe/train/data/*.json
+chartmoe/train/data/ChartMoE-Align
+chartmoe/train/data/SFT
