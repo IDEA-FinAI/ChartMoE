@@ -1,3 +1,8 @@
+"""
+    FEATURE: QuickTour of ChartMoE
+    AUTHOR: Brian Qu
+    URL: https://arxiv.org/abs/2409.03277
+"""
 from chartmoe import ChartMoE_Robot
 import torch
 

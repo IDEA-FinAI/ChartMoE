@@ -12,3 +12,4 @@ tqdm
 datasets==2.21.0
 python-Levenshtein
 opencv-python>=4.10.0
+wandb==0.19.6

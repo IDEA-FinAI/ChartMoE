@@ -1,3 +1,9 @@
+"""
+    FEATURE: WebUI of ChartMoE
+    AUTHOR: Brian Qu
+    URL: https://arxiv.org/abs/2409.03277
+    REFERENCE: https://github.com/Coobiw/MPP-LLaVA
+"""
 import argparse
 import os
 import random
@@ -133,7 +139,7 @@ with gr.Blocks() as demo:
                 num_beams = gr.Slider(
                     minimum=1,
                     maximum=5,
-                    value=3,
+                    value=1,
                     step=1,
                     interactive=True,
                     label="num beams",

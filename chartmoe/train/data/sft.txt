@@ -1,0 +1,2 @@
+./data/chartqa.json 70
+./data/chartgemma.json -1
