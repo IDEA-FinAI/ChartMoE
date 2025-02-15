@@ -33,7 +33,7 @@
 - 2024.9.10: We release ChartMoE!
 
 ## Training of ChartMoE
-Please refer to [chartmoe/train/README.md]!
+Please refer to [training readme](chartmoe/train/README.md)!
 
 ## Installation
 **Step 1.** Create a conda environment and activate it.
