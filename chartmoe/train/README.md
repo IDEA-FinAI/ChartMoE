@@ -1,4 +1,4 @@
-<div>
+<div align="center">
 <h1>Training Recipes of ChartMoE</h1>
 </div>
 
