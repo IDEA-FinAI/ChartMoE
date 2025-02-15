@@ -17,7 +17,8 @@
 
 [![arXiv](https://img.shields.io/badge/ArXiv-Prepint-red)](https://arxiv.org/abs/2409.03277)
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://chartmoe.github.io/)
-[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
+[![Hugging Face Model](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
+[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Dataset-8A2BE2)](https://huggingface.co/datasets/Coobiw/ChartMoE-Data)
 
 *If you have any question, feel free to contact [📧](mailto:brian.bw.qu@gmail.com).*
 
@@ -28,13 +29,29 @@
 **ChartMoE** is a multimodal large language model with Mixture-of-Expert connector for advanced chart 1)understanding, 2)replot, 3)editing, 4)highlighting and 5)transformation. 
 
 ## News
-
-- 2025.2.11: 🎉🎉🎉 ChartMoE is selected as ICLR2025 Oral!
-- 2025.1.23: 🎉🎉🎉 ChartMoE is accepted by ICLR2025!
+- 2025.2.16: ChartMoE-Data has been released at [🤗](https://huggingface.co/datasets/Coobiw/ChartMoE-Data). Please download it according to [our instruction](##Download and Organize the ChartMoE-Data)
+- 2025.2.15: Training codes and recipes are released! Please refer to [📖](chartmoe/train/)!
+- 2025.2.11: 🎉🎉🎉 ChartMoE is selected as **ICLR2025 Oral**!
+- 2025.1.23: 🎉🎉🎉 ChartMoE is accepted by **ICLR2025**!
 - 2024.9.10: We release ChartMoE!
 
 ## Training of ChartMoE
-Please refer to [training readme](chartmoe/train/)!
+Please refer to [📖training readme](chartmoe/train/)!
+
+## Download and Organize the ChartMoE-Data
+[🤗ChartMoE Data](https://huggingface.co/Coobiw/ChartMoE-Data) has been released! You can download it by running:
+
+```bash
+cd chartmoe/train
+python scripts/chartmoe_data_download.py
+```
+Datasets will appear at `chartmoe/train/data`.
+
+Then, please unzip these two files.
+```bash
+unzip ChartMoE-Align.zip
+unzip SFT.zip
+```
 
 ## Installation
 **Step 1.** Create a conda environment and activate it.
