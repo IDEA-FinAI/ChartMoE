@@ -9,7 +9,56 @@
 In this part, I'll introduct the training recipes for reproducing ChartMoE. Except for the training recipes, I also provided a checkpoint that can be reproduced according to following instructions. You can find it at [🤗](https://huggingface.co/Coobiw/ChartMoE_Reproduced). **This version has better performance on ChartQA(both with & without PoT).**
 
 
+## Download and Organize the ChartMoE-Data
+[🤗ChartMoE Data](https://huggingface.co/datasets/Coobiw/ChartMoE-Data) has been released! You can download it by running:
 
+```bash
+cd chartmoe/train
+python scripts/chartmoe_data_download.py
+```
+Datasets will appear at `chartmoe/train/data`.
+
+Then, please unzip these two files.
+```bash
+unzip ChartMoE-Align.zip
+unzip SFT.zip
+```
+
+Additionally, I want to announce that the `ChartY_replot` in `ChartMoE-Align` contains data with higher quality and bilingual texts! It may be a good choice to sample more from `ChartY_replot`.
+
+### Data Format
+```python
+  [
+    {
+      "id": "0",
+      "image": ['path/to/image_0.jpg']
+      "conversations": [
+        {
+          "from": "user",
+          "value": "<ImageHere> Please describe these two images in detail."
+        },
+        {
+          "from": "assistant",
+          "value": "......"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "image": ['path/to/image_1.jpg']
+      "conversations": [
+        {
+          "from": "user",
+          "value": "<ImageHere> what is the color of the dog"
+        },
+        {
+          "from": "assistant",
+          "value": "it is ...."
+        }
+      ]
+    }
+  ]
+```
 
 ## Download InternLM_XComposer2_Enhanced
 
