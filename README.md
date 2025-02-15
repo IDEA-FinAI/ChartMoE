@@ -53,6 +53,8 @@ unzip ChartMoE-Align.zip
 unzip SFT.zip
 ```
 
+Additionally, I want to announce that the `ChartY_replot` in `ChartMoE-Align` contains data with higher quality and bilingual texts! It may be a good choice to sample more from `ChartY_replot`.
+
 ## Installation
 **Step 1.** Create a conda environment and activate it.
 
