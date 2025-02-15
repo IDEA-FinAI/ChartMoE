@@ -161,5 +161,10 @@ cache/
 # wandb
 wandb/
 
-# debug dirs
+# training dirs
 chartmoe/train/debug/
+chartmoe/train/wandb/
+chartmoe/train/output/
+chartmoe/train/logs/
+chartmoe/train/ckpt/*
+chartmoe/train/data/*.json

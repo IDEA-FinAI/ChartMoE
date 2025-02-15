@@ -73,8 +73,18 @@ pip install flash-attn==2.7.0.post2
 p.s.: If you cannot install `flash-attn`, please set `attn_implementation` to `eager` in ChartMoE's [`config.json`](https://huggingface.co/IDEA-FinAI/chartmoe/blob/main/config.json#L10).
 
 ## Quick Start
+**Huggingface Download Script of ChartMoE**
+*Note: I've supported `flash-attn` for ChartMoE on Feb. 15. If you download chartmoe before this date, you can re-download it for acceleration.*
+
+Run:
+```bash
+cd chartmoe/train
+python scripts/chartmoe_download.py
+```
+Then, ChartMoE will appear at `chartmoe/train/ckpt/chartmoe`.
+
 **Customize the weight path of ChartMoE:**
-Set your own [ChartMoE_HF_PATH](https://github.com/Coobiw/ChartMoE/tree/master/chartmoe/utils/custom_path.py#L2).
+Set your own [ChartMoE_HF_PATH](https://github.com/Coobiw/ChartMoE/tree/master/chartmoe/utils/custom_path.py#L2). I suggest to use the absolute path of `chartmoe/train/ckpt/chartmoe`.
 
 Code Demo:
 
@@ -119,6 +129,10 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py
 ```
 
 ![](./gradio_demo_pics/gradio_demo1.jpg)
+
+## FAQs
+Q1: [CLIP: Input image size (490x490) doesn't match model (336x336)](https://github.com/IDEA-FinAI/ChartMoE/issues/6)
+A1: Please degrade your `transformers` according to `requiresments.txt`.
 
 ## Acknowledgement
 Thanks to [InternLM-XComposer2](https://github.com/InternLM/InternLM-XComposer/tree/main/InternLM-XComposer-2.0) and [CuMo](https://github.com/SHI-Labs/CuMo) for their releases of model weights and source codes! And thanks to [MMC](https://github.com/FuxiaoLiu/MMC) and [ChartGemma](https://github.com/vis-nlp/ChartGemma) for their releases of the high-quality instruction-tuning data!

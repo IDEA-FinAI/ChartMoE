@@ -80,16 +80,16 @@ def extract_python_content(text):
 
 class ChartQATester:
 
-    def __init__(self, pot=False, pot_idx=0):
+    def __init__(self, ckpt_path=None, pot=False, pot_idx=0):
         # ChartQA root
         self.root = ChartQA_ROOT
         self.vis_root = ChartQA_TEST_IMG_ROOT
 
-        self.robot = ChartMoE_Robot()
-        self.prompt = '[UNUSED_TOKEN_146]user\nAnswer the question using a single word or phrase. {}[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n'
+        self.robot = ChartMoE_Robot(ckpt_path=ckpt_path)
+        self.prompt = '[UNUSED_TOKEN_146]user\nAnswer the question using a single word or phrase.{}[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n'
         pot_prompts = [
-            '[UNUSED_TOKEN_146]user\nPlease give the program of thought. {}[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n',
-            '[UNUSED_TOKEN_146]user\nPlease give the program of thought in python code. Use print function to output the answer in the end. {}[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n',
+            '[UNUSED_TOKEN_146]user\nPlease give the program of thought.{}[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n',
+            '[UNUSED_TOKEN_146]user\nPlease give the program of thought in python code. Use print function to output the answer in the end.{}[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n',
         ]
         self.pot_prompt = pot_prompts[pot_idx]
         
@@ -184,9 +184,10 @@ class ChartQATester:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--save_path", type=str, required=True)
+    parser.add_argument("--ckpt_path", type=str, default=None)
     parser.add_argument('--pot', action='store_true')
     parser.add_argument('--pot_idx', type=int, default=0, choices=[0, 1])
     args = parser.parse_args()
 
-    tester = ChartQATester(pot=args.pot, pot_idx=args.pot_idx)
+    tester = ChartQATester(ckpt_path=args.ckpt_path, pot=args.pot, pot_idx=args.pot_idx)
     tester.infer_all_answers(output_path=args.save_path)

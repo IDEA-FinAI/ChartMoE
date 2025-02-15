@@ -23,13 +23,14 @@ def __padding__(image):
     return image
     
 class ChartMoE_Robot:
-    def __init__(self, img_padding = False):
+    def __init__(self, ckpt_path = None, img_padding = False):
+        model_path = ckpt_path if ckpt_path else ChartMoE_HF_PATH
         tokenizer = AutoTokenizer.from_pretrained(
-                ChartMoE_HF_PATH, 
+                model_path, 
                 trust_remote_code=True
             )
         self.model = AutoModel.from_pretrained(
-                    ChartMoE_HF_PATH,
+                    model_path,
                     trust_remote_code=True,
                 ).half().cuda().eval()
         self.tokenizer = tokenizer
