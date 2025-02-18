@@ -31,7 +31,7 @@
 ## News
 - 2025.2.16: ChartMoE-Data has been released at [🤗](https://huggingface.co/datasets/Coobiw/ChartMoE-Data). Please download it according to [our instruction](#download-and-organize-the-chartmoe-data).
 - 2025.2.15: Training codes and recipes are released! Please refer to [📖](chartmoe/train/)!
-- 2025.2.11: 🎉🎉🎉 ChartMoE is selected as **ICLR2025 Oral**!
+- 2025.2.11: 🎉🎉🎉 ChartMoE is selected as **ICLR2025 Oral(1.8%)**!
 - 2025.1.23: 🎉🎉🎉 ChartMoE is accepted by **ICLR2025**!
 - 2024.9.10: We release ChartMoE!
 
