@@ -39,7 +39,7 @@
 Please refer to [📖training readme](chartmoe/train/)!
 
 ## Download and Organize the ChartMoE-Data
-[🤗ChartMoE Data](https://huggingface.co/Coobiw/ChartMoE-Data) has been released! You can download it by running:
+[🤗ChartMoE Data](https://huggingface.co/datasets/Coobiw/ChartMoE-Data) has been released! You can download it by running:
 
 ```bash
 cd chartmoe/train
