@@ -38,7 +38,7 @@ torchrun $DISTRIBUTED_ARGS train.py \
     --evaluation_strategy "no" \
     --save_strategy "epoch" \
     --save_total_limit 5 \
-    --learning_rate 5e-4 \
+    --learning_rate 5e-5 \
     --weight_decay 0.1 \
     --adam_beta2 0.95 \
     --warmup_ratio 0.0 \
