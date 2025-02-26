@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-<h3>Datasets are coming!!!</h3>
+<h3>Datasets are released at 🤗https://huggingface.co/datasets/Coobiw/ChartMoE-Data!</h3>
 </div>
 
 In this part, I'll introduct the training recipes for reproducing ChartMoE. Except for the training recipes, I also provided a checkpoint that can be reproduced according to following instructions. You can find it at [🤗](https://huggingface.co/Coobiw/ChartMoE_Reproduced). **This version has better performance on ChartQA(both with & without PoT).**
