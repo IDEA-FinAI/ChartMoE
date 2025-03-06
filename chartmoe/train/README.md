@@ -75,7 +75,11 @@ Then, ChartMoE will appear at `chartmoe/train/ckpt/InternLM-XComposer2_Enhanced`
 
 ## Diversely-Aligned MoE-MLP Training
 
+### Download the intermediate checkpoint
+I've uploaded the weight of the moe-connector which is diversely aligned (each of the experts is trainable, but the router is randomly initialized). [🤗HF Link](https://huggingface.co/Coobiw/ChartMoE-Aligned-Connector/tree/main). Please put the `mlp_moe.pth` to `chartmoe/train/output/moe_aligned/mlp_moe.pth`! Then you can directly run sft script~ 
+
 ### Training Pipeline of ChartMoE
+If you want to train your own moe-connecor, you can feel free to follow these instructions!
 
 ![Overview](../../asset/train_pipeline.png)
 
