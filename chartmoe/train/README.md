@@ -75,7 +75,11 @@ Then, ChartMoE will appear at `chartmoe/train/ckpt/InternLM-XComposer2_Enhanced`
 
 ## Diversely-Aligned MoE-MLP Training
 
+### Download the intermediate checkpoint
+I've uploaded the weight of the moe-connector which is diversely aligned (each of the experts is trainable, but the router is randomly initialized). [🤗HF Link](https://huggingface.co/Coobiw/ChartMoE-Aligned-Connector/tree/main). Please put the `mlp_moe.pth` to `chartmoe/train/output/moe_aligned/mlp_moe.pth`! Then you can directly run sft script~ 
+
 ### Training Pipeline of ChartMoE
+If you want to train your own moe-connecor, you can feel free to follow these instructions!
 
 ![Overview](../../asset/train_pipeline.png)
 
@@ -128,13 +132,13 @@ CUDA_VISIBLE_DEVICES=0 python chartmoe/eval_ChartQA.py --ckpt_path chartmoe/trai
 
 Result:
 ```
-+-----------+--------------------+--------+--------+
-|    @AP    |        0.05        |  0.1   |  0.2   |
-+-----------+--------------------+--------+--------+
-|   Human   |       0.7184       | 0.7544 | 0.784  |
-| Augmented |       0.9136       | 0.9256 | 0.9392 |
-|  Averaged | 0.8160000000000001 |  0.84  | 0.8616 |
-+-----------+--------------------+--------+--------+
++-----------+--------+--------+--------+
+|    @AP    |  0.05  |  0.1   |  0.2   |
++-----------+--------+--------+--------+
+|   Human   | 0.704  | 0.7376 | 0.772  |
+| Augmented | 0.9056 | 0.9192 | 0.9352 |
+|  Averaged | 0.8048 | 0.8284 | 0.8536 |
++-----------+--------+--------+--------+
 ```
 
 PoT:
@@ -144,11 +148,11 @@ CUDA_VISIBLE_DEVICES=0 python chartmoe/eval_ChartQA.py --ckpt_path chartmoe/trai
 
 Result:
 ```
-+-----------+--------+-------+--------+
-|    @AP    |  0.05  |  0.1  |  0.2   |
-+-----------+--------+-------+--------+
-|   Human   | 0.7976 | 0.816 | 0.832  |
-| Augmented | 0.912  | 0.924 | 0.9384 |
-|  Averaged | 0.8548 |  0.87 | 0.8852 |
-+-----------+--------+-------+--------+
++-----------+--------+--------+-------+
+|    @AP    |  0.05  |  0.1   |  0.2  |
++-----------+--------+--------+-------+
+|   Human   | 0.7952 | 0.8128 | 0.828 |
+| Augmented | 0.904  | 0.9176 | 0.932 |
+|  Averaged | 0.8496 | 0.8652 |  0.88 |
++-----------+--------+--------+-------+
 ```

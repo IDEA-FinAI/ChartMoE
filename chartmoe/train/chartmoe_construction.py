@@ -13,6 +13,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, HfArgumentParser
 from mlp_moe import MLPMoE
 import os
 import shutil
+from glob import glob
 
 
 @dataclass
@@ -41,8 +42,10 @@ assert script_args.adapter_model_name is not None, 'please provide the name of t
 assert script_args.output_path is not None, 'please provide the the merged model saved path'
 assert script_args.chartmoe_hf_dir is not None, 'please provide the path of downloaded chartmoe hf dir'
 
+adapter_model_name = glob(os.path.join(script_args.adapter_model_name, "checkpoint-*"))[0]
+
 # get base model path from adapter_config.json
-peft_config = PeftConfig.from_pretrained(script_args.adapter_model_name)
+peft_config = PeftConfig.from_pretrained(adapter_model_name)
 base_model_path = peft_config.base_model_name_or_path
 print(f"\033[31mLoad base model from {base_model_path}\033[0m")
 model = AutoModelForCausalLM.from_pretrained(
@@ -70,7 +73,7 @@ tokenizer = AutoTokenizer.from_pretrained(
 )
 
 # Load the PEFT model
-model = PeftModel.from_pretrained(model, script_args.adapter_model_name)
+model = PeftModel.from_pretrained(model, adapter_model_name)
 model.eval()
 
 print("\033[33mmerge the lora weights and `modules_to_save` weights\033[0m")

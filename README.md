@@ -29,6 +29,7 @@
 **ChartMoE** is a multimodal large language model with Mixture-of-Expert connector for advanced chart 1)understanding, 2)replot, 3)editing, 4)highlighting and 5)transformation. 
 
 ## News
+- 2025.3.6: A reproduction of diversely aligned moe-connector is released at [🤗HF Link](https://huggingface.co/Coobiw/ChartMoE-Aligned-Connector/tree/main/moe_aligned).
 - 2025.2.16: ChartMoE-Data has been released at [🤗](https://huggingface.co/datasets/Coobiw/ChartMoE-Data). Please download it according to [our instruction](#download-and-organize-the-chartmoe-data).
 - 2025.2.15: Training codes and recipes are released! Please refer to [📖](chartmoe/train/)!
 - 2025.2.11: 🎉🎉🎉 ChartMoE is selected as **ICLR2025 Oral(1.8%)**!
