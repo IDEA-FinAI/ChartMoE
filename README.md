@@ -19,6 +19,7 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://chartmoe.github.io/)
 [![Hugging Face Model](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
 [![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Dataset-8A2BE2)](https://huggingface.co/datasets/Coobiw/ChartMoE-Data)
+[![Zhihu](https://img.shields.io/badge/Blog-Zhihu-00BFFF)](https://zhuanlan.zhihu.com/p/31634026232)
 
 *If you have any question, feel free to contact [📧](mailto:brian.bw.qu@gmail.com).*
 
