@@ -20,7 +20,7 @@
 [![Hugging Face Model](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
 [![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Dataset-8A2BE2)](https://huggingface.co/datasets/Coobiw/ChartMoE-Data)
 [![Zhihu](https://img.shields.io/badge/Blog-Zhihu-00BFFF)](https://zhuanlan.zhihu.com/p/31634026232) <br>
-[![issue resolution](https://img.shields.io/github/issues-closed-raw/IDEA-FinAI/ChartMoE)](https://github.com/IDEA-FinAI/ChartMoE/issues)
+[![closed issue](https://img.shields.io/github/issues-closed-raw/IDEA-FinAI/ChartMoE)](https://github.com/IDEA-FinAI/ChartMoE/issues)
 [![open issues](https://img.shields.io/github/issues-raw/IDEA-FinAI/ChartMoE)](https://github.com/IDEA-FinAI/ChartMoE/issues)
 
 *If you have any question, feel free to contact [📧](mailto:brian.bw.qu@gmail.com).*
