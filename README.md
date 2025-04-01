@@ -19,7 +19,8 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-brightgreen)](https://chartmoe.github.io/)
 [![Hugging Face Model](https://img.shields.io/badge/Hugging%20Face-Model-blue)](https://huggingface.co/IDEA-FinAI/chartmoe)
 [![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Dataset-8A2BE2)](https://huggingface.co/datasets/Coobiw/ChartMoE-Data)
-[![Zhihu](https://img.shields.io/badge/Blog-Zhihu-00BFFF)](https://zhuanlan.zhihu.com/p/31634026232) <br>
+[![Zhihu](https://img.shields.io/badge/Blog-Zhihu-00BFFF)](https://zhuanlan.zhihu.com/p/31634026232)
+[![机器之心](https://img.shields.io/badge/Blog-机器之心-black)](https://mp.weixin.qq.com/s/9anQbcCahVLnXhNj7aU48Q)<br>
 [![closed issue](https://img.shields.io/github/issues-closed-raw/IDEA-FinAI/ChartMoE)](https://github.com/IDEA-FinAI/ChartMoE/issues)
 [![open issues](https://img.shields.io/github/issues-raw/IDEA-FinAI/ChartMoE)](https://github.com/IDEA-FinAI/ChartMoE/issues)
 
