@@ -171,7 +171,7 @@ Thanks to [InternLM-XComposer2](https://github.com/InternLM/InternLM-XComposer/t
 If you find our idea or code inspiring, please cite our paper:
 ```bibtex
 @article{ChartMoE,
-    title={ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding},
+    title={ChartMoE: Mixture of Diversely Aligned Expert Connector for Chart Understanding},
     author={Zhengzhuo Xu and Bowen Qu and Yiyan Qi and Sinan Du and Chengjin Xu and Chun Yuan and Jian Guo},
     journal={ArXiv},
     year={2024},
